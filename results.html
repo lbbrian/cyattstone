@@ -1,0 +1,38 @@
+<!-- results.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Quiz Results</title>
+</head>
+<body>
+  <h1>Your Quiz Answers</h1>
+  <a href="index.html">Go back to redo the quiz</a>
+  <ol>
+    <li>Name: <strong id="username"></strong></li>
+    <li>Q1: <strong id="question1"></strong></li>
+    <li>Q2: <strong id="question2"></strong></li>
+    <li>Q3: <strong id="question3"></strong></li>
+    <li>Q4: <strong id="question4"></strong></li>
+    <li>Q5: <strong id="question5"></strong></li>
+    <li>Feedback: <strong id="feedback"></strong></li>
+  </ol>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+
+    document.getElementById("username").textContent = params.get("username") || 'N/A';
+    document.getElementById("question1").textContent = params.get("question1") || 'N/A';
+    document.getElementById("question2").textContent = params.get("question2") || 'N/A';
+    document.getElementById("question3").textContent = params.get("question3") || 'N/A';
+    document.getElementById("question4").textContent = params.get("question4") || 'N/A';
+    document.getElementById("question5").textContent = params.get("question5") || 'N/A';
+
+    // Handle checkbox (feedback)
+    const feedback = params.getAll("feedback");
+    document.getElementById("feedback").textContent = feedback.length > 0 ? feedback.join(", ") : 'None';
+  </script>
+  <img src="https://img.freepik.com/free-vector/teamwork-results-achievement-concept_3446-542.jpg" width="400">
+</body>
+</html>
