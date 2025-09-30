@@ -1,0 +1,66 @@
+<!-- quiz.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Easy Math Quiz</title>
+</head>
+<body>
+<h1 style="background-color: lightblue; text-align: center;">Easy Math Quiz</h1>
+
+<form action="results.html" method="get">
+    <p>Enter your name below if you agree that you are not going to cheat:</p>
+    <label>Name:</label>
+    <input type="text" name="username" placeholder="Enter your name" required><br><br>
+
+    <p>Solve:</p>
+    <label>3x - 12 = 0 | Find the value of x</label>
+    <select name="question1">
+        <option value="">Select an Option</option>
+        <option value="x = 2">x = 2</option>
+        <option value="x = 4">x = 4</option>
+        <option value="x = 12">x = 12</option>
+        <option value="x = 3">x = 3</option>
+    </select><br><br>
+
+    <p>Simplify:</p>
+    <label>9y + 6 - 7y - 3</label>
+    <input type="text" name="question2" placeholder="Enter your answer"><br><br>
+
+    <p>Solve:</p>
+    <label>What is 80% of 94?</label>
+    <input type="text" name="question3" placeholder="Enter your answer"><br><br>
+
+    <p>Choose the correct combination:</p>
+    <label>3x - 12 | Find the value of x</label>
+    <select name="question4">
+        <option value="">Select an Option</option>
+        <option value="A, B, C">A, B, C</option>
+        <option value="C, D, E">C, D, E</option>
+        <option value="A, B, E">A, B, E</option>
+        <option value="D, A, C">D, A, C</option>
+    </select><br><br>
+
+    <p>Choose from images:</p>
+    <img src="https://www.sadlier.com/hubfs/math-multiple-response-items-1-737045-edited.jpg" alt="mathproblem1" width="200"><br>
+    <img src="https://screens.cdn.wordwall.net/400/16d375334f964b48a9e0f9a97f6eba92_0" width="300"><br><br>
+
+    <label>Select one:</label><br>
+    <input type="radio" id="a" name="question5" value="A">
+    <label for="a">A</label><br>
+    <input type="radio" id="b" name="question5" value="B">
+    <label for="b">B</label><br><br>
+
+    <p>How did you do?</p>
+    <input type="checkbox" id="good" name="feedback" value="I did good">
+    <label for="good">I did good</label><br>
+    <input type="checkbox" id="okay" name="feedback" value="I did okay">
+    <label for="okay">I did okay</label><br>
+    <input type="checkbox" id="failed" name="feedback" value="I completely failed">
+    <label for="failed">I completely failed</label><br><br>
+
+    <input type="submit" value="Submit Quiz">
+</form>
+</body>
+</html>
